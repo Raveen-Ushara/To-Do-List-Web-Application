@@ -1,0 +1,115 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+    color: #333;
+}
+
+.container {
+    width: 450px;
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #4a148c; /* Darker purple */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#taskInput:focus {
+    outline: none;
+    border-color: #6a11cb;
+}
+
+#addButton {
+    padding: 12px 20px;
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#addButton:hover {
+    background-color: #4a148c;
+}
+
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#taskList li {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+#taskList li:hover {
+    background-color: #f9f9f9;
+}
+
+#taskList li:last-child {
+    border-bottom: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.deleteButton, .completeButton {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.completeButton {
+    background-color: #28a745;
+}
+
+.deleteButton:hover {
+    background-color: #c82333;
+}
+.completeButton:hover {
+    background-color: #218838;
+}
